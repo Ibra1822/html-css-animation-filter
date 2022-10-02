@@ -30,7 +30,7 @@ background-color: #FF0002;
 }
 
 .ex-3-square:hover{
-    border-radius: 50%;
+    border-radius: 100%;
 }
 
 /* FINE TERZO ES  */
@@ -51,8 +51,11 @@ background-color: #FF0002;
 }
 
 .ex-5-square:hover{
-    transform: scale(2.01,2.01);
+    transform: scale(2);
+}
 
+.ex-5-square:active{
+    transform: scale(.5);
 }
 
 /* FINE QUINTO ES  */
@@ -68,19 +71,19 @@ background-color: #FF0002;
 }
 
 .ex-7-img:hover{
-    filter: sepia(0.5);
+    filter: sepia(0.5) grayscale(0.6);
 
 }
 
 /* FINE SETTIMO ES  */
 
 .ex-8-img{
-    transition: all 1.2s;
+    transition: all 2s;
 }
 
 .ex-8-img:hover{
     border-radius: 15px;
-    filter: contrast(200%);
+    filter: grayscale(.6) sepia(.5);
     filter: sepia(0.7);
 }
 
@@ -91,10 +94,9 @@ background-color: #FF0002;
 }
 
 .ex-9-img:hover{
-    transform: scale(1.4,1.4);
-    border-radius: 15px;
-    filter: contrast(200%);
-    filter: sepia(0.7);
+    filter: grayscale(.6) sepia(.5);
+    border-radius: 20px;
+    transform: scale(1.5);
 }
 
 /* FINE NONO ES  */
@@ -118,8 +120,14 @@ background-color: #FF0002;
 }
 
 @keyframes rotate-icon2{
-    75%{
-        transform: rotate(270deg);
+    0% {
+        transform: rotate(0);
+    }
+    90% {
+        transform: rotate(315deg);
+    }
+    100% {
+        transform: rotate(0);
     }
 }
 
@@ -144,17 +152,15 @@ background-color: #FF0002;
 
 @keyframes left-right{
 
-    0%{top: -10px;
+    0%{
         left: 10%;
     }
 
     50%{
-        top: -10px;
-        left: 65%;
+        left: calc(100% - 60px);
     }
 
     100%{
-        top: -10px;
         left: 10%;
     }
 }
@@ -163,17 +169,14 @@ background-color: #FF0002;
 
 
     0%{
-        bottom: -10px;
         right: 20%;
     }
 
     50%{
-        bottom: -10px;
-        right: 65%;
+        right:calc(100% - 60px);
     }
 
     100%{
-        bottom: -10px;
         right: 20%;
     }
 }
